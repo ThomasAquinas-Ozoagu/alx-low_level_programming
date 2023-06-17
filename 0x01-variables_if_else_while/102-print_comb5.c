@@ -18,7 +18,7 @@ int main(void)
 		{
 			if (ten != unit)
 			{
-				if (unit > ten)
+				if (ten <= 8 && unit <= 9)
 				{
 				putchar(48 + ten);
 				putchar(48 + unit);
