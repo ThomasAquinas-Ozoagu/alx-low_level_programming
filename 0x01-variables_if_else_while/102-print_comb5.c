@@ -9,24 +9,28 @@
 
 int main(void)
 {
-	int unit;
-	int ten;
+	int tho;
+	int uni;
 
-	for (ten = 0; ten < 10; ten++)
+
+	for (tho = 0; tho < 100; tho++)
 	{
-		for (unit = 0; unit < 10; unit++)
+		for (uni = 0; uni < 100; uni++)
 		{
-			if (ten != unit)
+			if (uni != tho)
 			{
-				if (ten <= 8 && unit <= 9)
+				if (uni > tho)
 				{
-				putchar(48 + ten);
-				putchar(48 + unit);
-				if (ten != 8 || unit != 9)
-				{
-					putchar(',');
+					putchar(48 + tho / 10);
+					putchar(48 + tho % 10);
 					putchar(' ');
-				}
+					putchar(48 + uni / 10);
+					putchar(48 + uni % 10);
+					if (tho != 98 || uni != 99)
+					{
+						putchar(',');
+						putchar(' ');
+					}
 				}
 			}
 		}
