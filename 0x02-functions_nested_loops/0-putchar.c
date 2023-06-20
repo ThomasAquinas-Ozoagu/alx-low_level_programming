@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "main.h"
 
 /* betty style doc for function main goes there */
 /**
@@ -14,8 +14,8 @@ int main(void)
 
 	for (count = 0; count < 8; count++)
 	{
-		putchar(word[count]);
+		_putchar(word[count]);
 	}
-	putchar('\n');
+	_putchar('\n');
 	return (0);
 }
