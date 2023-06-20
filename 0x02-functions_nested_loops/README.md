@@ -1,0 +1,1 @@
+I use this directory to practice my understanding of C - Functions and nested loops.
