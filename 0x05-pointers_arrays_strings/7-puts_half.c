@@ -19,7 +19,7 @@ void puts_half(char *str)
 
 	count--;
 	if (count % 2 != 0)
-		l = (count + 1) / 2;
+		l = (count - 1) / 2;
 	else
 		l = count / 2;
 
