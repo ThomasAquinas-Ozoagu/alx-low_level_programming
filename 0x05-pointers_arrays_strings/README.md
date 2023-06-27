@@ -1,0 +1,1 @@
+This directory contain my exercise files for understanding pointers.
