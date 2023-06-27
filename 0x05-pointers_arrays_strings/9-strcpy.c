@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _strcpy - swap two integers using their pointers.
+ * _strcpy - copies a string using a pointer string 1 --> string 2
  *
  * @dest: string 1
  *
@@ -12,5 +12,12 @@
 
 char *_strcpy(char *dest, char *src)
 {
+	int i = 0;
 
+/*	for (i = 0; src[i] != '\0'; i++)*/
+	do {
+		*(dest + i) = src[i];
+		i++;
+	} while (src[i] != '\0');
+	return(dest);
 }
