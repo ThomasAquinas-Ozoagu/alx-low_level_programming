@@ -1,0 +1,1 @@
+This directory contains my exercise files for More pointers, arrays and strings.
