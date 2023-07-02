@@ -13,9 +13,14 @@ void reverse_array(int *a, int n)
 	int i = 0;
 	int j;
 	int k = n - 1;
+	int l;
 
+	if (n % 2)
+		l = n / 2;
+	else
+		l = (n + 1) / 2;
 
-	while (i <= n / 2)
+	while (i < l)
 	{
 		j = a[i];
 		a[i] = a[k];
