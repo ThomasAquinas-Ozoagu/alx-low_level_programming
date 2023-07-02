@@ -14,20 +14,28 @@
 
 char *_strncpy(char *dest, char *src, int n)
 {
-	int i;
+	int i, k;
 
 /*	for (j = 0; dest[j] != '\0'; j++)*/
 
-/*	for (k = 0; src[k] != '\n'; k++)*/
+	for (k = 0; src[k] != '\n'; k++)
+		;
 
-
-/*	if (k > n)*/
-
+	if (k > n)
+	{
 		for (i = 0; i < n ; i++)
 		{
 			*(dest + i) = src[i];
 		}
-
+	}
+	else
+	{
+		for (i = 0; i <= k ; i++)
+		{
+			*(dest + i) = src[i];
+		}
+		*(dest + k + 1) = '\0';
+	}
 
 	return (dest);
 }
