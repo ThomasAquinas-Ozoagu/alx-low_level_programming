@@ -30,11 +30,11 @@ char *_strncpy(char *dest, char *src, int n)
 	}
 	else
 	{
-		for (i = 0; i <= k ; i++)
+		for (i = 0; i < k ; i++)
 		{
 			*(dest + i) = src[i];
 		}
-		*(dest + k + 1) = '\0';
+		*(dest + k) = '\0';
 	}
 
 	return (dest);
