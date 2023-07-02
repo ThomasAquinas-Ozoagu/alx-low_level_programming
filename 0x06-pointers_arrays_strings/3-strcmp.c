@@ -12,22 +12,23 @@
 
 int _strcmp(char *s1, char *s2)
 {
-	int j;
+	int j, k;
+	int c1 = 0;
+	int c2 = 0;
 
-
-	for (j = 0; s1[j] || s2[j]; j++)
+	for (j = 0; s1[j]; j++)
 	{
-		if (s1[j] > s2[j])
-			return (15);
-
-		else if (s1[j] < s2[j])
-			return (-15);
-
-		else
-		{
-			;
-		}
+		c1 = c1 + (int)s1[j];
+	}
+	for (k = 0; s1[k]; k++)
+	{
+		c2 = c2 + (int)s2[k];
 	}
 
+	if (c1 > c2)
+		return (15);
+	else if (c1 < c2)
+		return (-15);
+	else
 		return (0);
 }
