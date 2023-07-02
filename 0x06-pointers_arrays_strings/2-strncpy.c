@@ -1,5 +1,6 @@
 #include "main.h"
 
+
 /**
  * _strncpy - that copies a string src to dest starting from n
  *
@@ -18,7 +19,7 @@ char *_strncpy(char *dest, char *src, int n)
 
 /*	for (j = 0; dest[j] != '\0'; j++)*/
 
-	for (k = 0; src[k] != '\n'; k++)
+	for (k = 0; src[k]; k++)
 		;
 
 	if (k > n)
