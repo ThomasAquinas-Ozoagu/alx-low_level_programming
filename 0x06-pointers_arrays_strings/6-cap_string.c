@@ -16,26 +16,31 @@ char *cap_string(char *str)
 
 	for (i = 0; str[i]; i++)
 	{
-		if ((i == 0) && ((str[i] > 96 && str[i] < 123)))
+		if ((i == 0) && (str[i] > 96 && str[i] < 123))
+		{
+			str[i] -= ' ';
+		}
+		else if (alpha > 0)
+		{
+			if (str[i] > 96 && str[i] < 123)
 			{
 				str[i] -= ' ';
 			}
-			else if (alpha == 1)
-			{
-				if (str[i] > 96 && str[i] < 123)
-					str[i] -= ' ';
-				alpha = 0;
-			}
-			else if (str[i] == 9 || str[i] == 10 || str[i] == 32)
-				alpha = 1;
-			else if (str[i] == 33 || str[i] == 40 || str[i] == 41)
-				alpha = 1;
-			else if (str[i] == 44 || str[i] == 46 || str[i] == 59)
-				alpha = 1;
-			else if (str[i] == 63 || str[i] == 123 || str[i] == 125)
-				alpha = 1;
-			else if (str[i] == 34)
-				alpha = 1;
+			alpha = 0;
+		}
+		else if (str[i] == '!' || str[i] == '\n' || str[i] == ' ')
+			alpha = 1;
+		else if (str[i] == '\t' || str[i] == '(' || str[i] == ')')
+			alpha = 1;
+		else if (str[i] == ',' || str[i] == '.' || str[i] == ';')
+			alpha = 1;
+		else if (str[i] == '?' || str[i] == '{' || str[i] == '}')
+			alpha = 1;
+		else if (str[i] == '"')
+			alpha = 1;
+
+		if (str[i] == '\t')
+			str[i] = ' ';
 	}
 	return (str);
 }
