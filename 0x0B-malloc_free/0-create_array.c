@@ -21,7 +21,7 @@ char *create_array(unsigned int size, char c)
 	while (n < size)
 	{
 		alpha[n] = c;
-		if (alpha[0] != c)
+		if (alpha[n] != c)
 			return (0);
 		n++;
 	}
