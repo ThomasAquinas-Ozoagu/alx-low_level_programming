@@ -23,7 +23,7 @@ char *create_array(unsigned int size, char c)
 		alpha[n] = c;
 		n++;
 	}
-	if (alpha[n - 1] != c)
+	if (alpha[size - 1] != c)
 	{
 		return (0);
 	}
