@@ -27,7 +27,7 @@ char *_strdup(char *str)
 		ing = malloc(n * sizeof(char));
 
 		o = 0;
-		while (o < n)
+		while (o <= n)
 		{
 			ing[o] = str[o];
 			if (ing[o] != str[o])
