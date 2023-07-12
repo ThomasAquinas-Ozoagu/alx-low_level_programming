@@ -30,8 +30,11 @@ char *_strdup(char *str)
 		while (o < n)
 		{
 			ing[o] = str[o];
+			if (ing[o] != str[o])
+				m = 1;
 			o++;
 		}
+
 	}
 	if (m > 0)
 		return (NULL);
