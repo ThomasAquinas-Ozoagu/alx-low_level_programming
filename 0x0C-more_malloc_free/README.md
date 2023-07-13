@@ -1,0 +1,1 @@
+This directory contains my exercise files for 0x0C. C - More malloc, free.
