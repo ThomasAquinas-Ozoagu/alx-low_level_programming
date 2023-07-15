@@ -5,22 +5,15 @@
 
 /**
  * main - multiplies two numbers.
- *
  * @argc:  number of inputs
- *
  * @argv: numbers to be multiplied
- *
  * Return: 0 if aliswel
  */
-
 int main(int argc, char *argv[])
 {
 	char *p;
-	long *num;
+	long sum = 0, *num, *conv;
 	int i, j, ret = 0;
-	long *conv;
-	long sum = 0;
-
 
 	if (argc < 2)
 	{
@@ -35,8 +28,6 @@ int main(int argc, char *argv[])
 		for (i = 1; i < argc; i++)
 		{
 			conv[i] = strtol(argv[i], &p, 10);
-
-/*		check if string is an integer and other errors */
 if (errno != 0 || *p != '\0' || conv[i] > INT_MAX || conv[i] < INT_MIN)
 {
 	free(num);
@@ -44,18 +35,11 @@ if (errno != 0 || *p != '\0' || conv[i] > INT_MAX || conv[i] < INT_MIN)
 	printf("Error\n");
 	return (1);
 }
-
 		else
-		{
 			num[i] = conv[i];
 		}
-		}
 		for (j = 1; j < argc; j++)
-		{
 			sum += num[j];
-
-		}
-
 		printf("%ld\n", sum);
 	}
 	return (ret);
