@@ -1,1 +1,0 @@
-This directory contains my exercise files on dynamic memory allocation
