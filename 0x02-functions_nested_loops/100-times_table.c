@@ -26,7 +26,7 @@ void print_times_table(int n)
 					_putchar(' ');
 					if (mul < 100)
 						_putchar(' ');
-			       		if (mul < 10)
+					if (mul < 10)
 						_putchar(' ');
 				}
 				if (mul >= 100)
@@ -42,7 +42,6 @@ void print_times_table(int n)
 				}
 				if (mul < 10)
 					_putchar('0' + mul);
-			       
 			}
 			_putchar('\n');
 		}
