@@ -6,15 +6,15 @@
  * Return: result of computation
  */
 
-int main()
+int main(void)
 {
 	int n, ans;
 
-	for(n = 1; n < 1024; n++)
+	for (n = 1; n < 1024; n++)
 	{
-		if (n % 3 ==0 || n % 5 == 0)
+		if (n % 3 == 0 || n % 5 == 0)
 			ans += n;
 	}
 	printf("%d\n", ans);
-	return(0);
+	return (0);
 }
