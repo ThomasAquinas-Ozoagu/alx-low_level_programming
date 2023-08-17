@@ -8,10 +8,9 @@
 
 int main(void)
 {
-	long unsigned int n = 0, m = 1, sum;
+	unsigned long int n = 0, m = 1, sum;
 	int count;
 
-	printf("1, ");
 
 	for (count = 0; count < 50; count++)
 	{
