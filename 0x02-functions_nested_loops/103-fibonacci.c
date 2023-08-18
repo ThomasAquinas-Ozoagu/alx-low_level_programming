@@ -25,12 +25,14 @@ int main(void)
 			if (sum % 2 == 0)
 			{
 				total += sum;
-				printf("%lu, ", total);
 			}
 
 		}
 		else
+		{
+			printf("%lu", total);
 			break;
+		}
 	}
 	printf("\n");
 	return (0);
