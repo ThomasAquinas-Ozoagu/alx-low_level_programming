@@ -35,8 +35,12 @@ int main(void)
 
 		printf(", ");
 		if (sum2 > 0)
+		{
 			printf("%lu", sum2);
-		printf("%lu", sum1);
+			printf("%015lu", sum1);
+		}
+		else
+			printf("%lu", sum1);
 
 	}
 	printf("\n");
