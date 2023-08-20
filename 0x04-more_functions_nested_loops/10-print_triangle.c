@@ -11,11 +11,8 @@ void print_triangle(int size)
 	int height = size;
 	int hash = size;
 
-	while (size <= 0)
-	{
+	if (size <= 0)
 		_putchar('\n');
-		break;
-	}
 
 	while (size > 0)
 	{
