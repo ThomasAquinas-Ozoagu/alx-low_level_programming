@@ -8,7 +8,7 @@
 
 void print_number(int n)
 {
-	int count, temp, quo;
+	int temp;
 
 	if (n == 0)
 	{
@@ -27,26 +27,29 @@ void print_number(int n)
 		;
 	else
 	{
+		if (temp > 999)
+		{
+			_putchar('0' + temp / 1000);
+			temp = temp % 1000;
+			if (temp < 100)
+				_putchar('0');
+			if (temp < 10)
+				_putchar('0');
+		}
+		if (temp > 99 && temp < 1000)
+		{
+			_putchar('0' + temp / 100);
+			temp = temp % 100;
+			if (temp < 10)
+				_putchar('0');
+		}
+		if (temp > 9 && temp < 100)
+		{
+			_putchar('0' + temp / 10);
+			temp = temp % 10;
+		}
 		if (temp < 10)
 			_putchar('0' + temp);
-		else
-		{
-			int rem = temp;
-
-			while (temp / 10 > 0)
-			{
-				temp = temp / 10;
-				count++;
-			}
-
-			while (count > 0)
-			{
-				quo = rem / (count * 10);
-				_putchar('0' + quo);
-				rem = rem - (count * 10);
-				count--;
-			}
-		}
 	}
 	_putchar('\n');
 }
