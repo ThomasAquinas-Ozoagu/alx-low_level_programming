@@ -10,18 +10,17 @@ int main(void)
 	long int num = 612852475143;
 	long int factor = 2;
 	long int quo = num;
-/*	int prime = 0;*/
 
 	while (quo > 1)
 	{
 		if (quo % factor == 0)
 		{
 			quo = (quo / factor);
-			printf("%li, ", factor);
 		}
 		else
 			factor++;
 	}
+	printf("%li", factor);
 	printf("\n");
 	return (0);
 }
