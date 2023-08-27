@@ -47,9 +47,17 @@ void print_number(int n)
 		if (temp < 10)
 			_putchar('0' + temp);
 	}
-/*	_putchar('\n'); */
+
 }
 
+
+/**
+ * print_1000 - Prints any number between 1000 and 9999
+ *
+ * @temp: the number to be printed
+ *
+ * Return: the remainder
+ */
 int print_1000(int temp)
 {
 	_putchar('0' + temp / 1000);
@@ -58,21 +66,37 @@ int print_1000(int temp)
 		_putchar('0');
 	if (temp < 10)
 		_putchar('0');
-	return(temp);
+	return (temp);
 }
 
+
+/**
+ * print_100 - Prints any number between 100 and 999
+ *
+ * @temp: the number to be printed
+ *
+ * Return: the remainder
+ */
 int print_100(int temp)
 {
 	_putchar('0' + temp / 100);
 	temp = temp % 100;
 	if (temp < 10)
 		_putchar('0');
-	return(temp);
+	return (temp);
 }
 
+
+/**
+ * print_10 - Prints any number between 10 and 99
+ *
+ * @temp: the number to be printed
+ *
+ * Return: the remainder
+ */
 int print_10(int temp)
 {
 	_putchar('0' + temp / 10);
 	temp = temp % 10;
-	return(temp);
+	return (temp);
 }
