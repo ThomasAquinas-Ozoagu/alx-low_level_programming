@@ -1,5 +1,10 @@
 #include "main.h"
 
+int print_1000(int temp);
+int print_100(int temp);
+int print_10(int temp);
+
+
 /**
  * print_number - prints an integer using _putchar.
  *
@@ -29,27 +34,45 @@ void print_number(int n)
 	{
 		if (temp > 999)
 		{
-			_putchar('0' + temp / 1000);
-			temp = temp % 1000;
-			if (temp < 100)
-				_putchar('0');
-			if (temp < 10)
-				_putchar('0');
+			temp = print_1000(temp);
 		}
 		if (temp > 99 && temp < 1000)
 		{
-			_putchar('0' + temp / 100);
-			temp = temp % 100;
-			if (temp < 10)
-				_putchar('0');
+			temp = print_100(temp);
 		}
 		if (temp > 9 && temp < 100)
 		{
-			_putchar('0' + temp / 10);
-			temp = temp % 10;
+			temp = print_10(temp);
 		}
 		if (temp < 10)
 			_putchar('0' + temp);
 	}
-	_putchar('\n');
+/*	_putchar('\n'); */
+}
+
+int print_1000(int temp)
+{
+	_putchar('0' + temp / 1000);
+	temp = temp % 1000;
+	if (temp < 100)
+		_putchar('0');
+	if (temp < 10)
+		_putchar('0');
+	return(temp);
+}
+
+int print_100(int temp)
+{
+	_putchar('0' + temp / 100);
+	temp = temp % 100;
+	if (temp < 10)
+		_putchar('0');
+	return(temp);
+}
+
+int print_10(int temp)
+{
+	_putchar('0' + temp / 10);
+	temp = temp % 10;
+	return(temp);
 }
