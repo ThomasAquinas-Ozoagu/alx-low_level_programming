@@ -1,5 +1,6 @@
 #include "main.h"
 
+int print_10000(int temp);
 int print_1000(int temp);
 int print_100(int temp);
 int print_10(int temp);
@@ -32,7 +33,11 @@ void print_number(int n)
 		;
 	else
 	{
-		if (temp > 999)
+		if (temp > 9999 && temp < 100000)
+		{
+			temp = print_10000(temp);
+		}
+		if (temp > 999 && temp < 10000)
 		{
 			temp = print_1000(temp);
 		}
@@ -50,6 +55,26 @@ void print_number(int n)
 
 }
 
+
+/**
+ * print_10000 - Prints any number between 10000 and 99999
+ *
+ * @temp: the number to be printed
+ *
+ * Return: the remainder
+ */
+int print_10000(int temp)
+{
+	_putchar('0' + temp / 10000);
+	temp = temp % 10000;
+	if (temp < 1000)
+		_putchar('0');
+	if (temp < 100)
+		_putchar('0');
+	if (temp < 10)
+		_putchar('0' + temp);
+	return (temp);
+}
 
 /**
  * print_1000 - Prints any number between 1000 and 9999
