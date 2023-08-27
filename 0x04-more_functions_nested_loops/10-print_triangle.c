@@ -19,7 +19,7 @@ void print_triangle(int size)
 		int width = height;
 		int mark = 1;
 
-		while (width > 0)
+		while (width > 1)
 		{
 			width--;
 			_putchar(' ');
