@@ -39,6 +39,8 @@ int main(int argc, char *argv[])
 			change = change % 2;
 		}
 		sum += change;
+		if (sum < 0)
+			sum = 0;
 		printf("%d\n", sum);
 	}
 	else
