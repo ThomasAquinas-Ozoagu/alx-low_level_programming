@@ -20,18 +20,23 @@ int main(int argc, char *argv[])
 		change = atoi(argv[1]);
 		if (change > 24)
 		{
-			sum += change % 25;
-			change = change / 25;
+			sum += change / 25;
+			change = change % 25;
 		}
 		if (change > 9)
 		{
-			sum += change % 10;
-			change = change / 10;
+			sum += change / 10;
+			change = change % 10;
 		}
 		if (change > 4)
 		{
-			sum += change % 5;
-			change = change / 5;
+			sum += change / 5;
+			change = change % 5;
+		}
+		if (change > 1)
+		{
+			sum += change / 2;
+			change = change % 2;
 		}
 		sum += change;
 		printf("%d\n", sum);
