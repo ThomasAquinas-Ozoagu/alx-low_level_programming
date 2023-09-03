@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
 
 	for (n = 1; n < argc; n++)
 	{
-		if (isIntegered(argv[n]) > 0)
+		if (isIntegered(argv[n]))
 			sum += atoi(argv[n]);
 		else
 		{
@@ -36,9 +36,16 @@ int main(int argc, char *argv[])
 }
 
 #include <string.h>
+
+/**
+ * isIntegered - checks for intgers
+ * @text: the string to be checked
+ * Return: 1 if yes
+ */
+
 int isIntegered(char *text)
 {
-	long unsigned int c;
+	unsigned long int c;
 
 	for (c = 0; c < strlen(text); c++)
 	{
