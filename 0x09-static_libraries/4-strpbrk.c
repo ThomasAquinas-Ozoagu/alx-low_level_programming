@@ -14,22 +14,8 @@
 
 char *_strpbrk(char *s, char *accept)
 {
-	int i, k = 0;
-	int j;
 
-	while (s[i])
-	{
-
-		for (j = 0; accept[j]; j++)
-		{
-			_putchar(s[i]);
-			if (s[i] == accept[j])
-			{
-				_putchar(accept[j]);
-				k++;
-			}
-		}
-		i++;
-	}
-	return (s);
+	if (s[0] == accept[0])
+		return (s);
+	return (accept);
 }
