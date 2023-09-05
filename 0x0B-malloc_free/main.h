@@ -12,6 +12,9 @@ int _putchar(char c);
 char *create_array(unsigned int size, char c);
 #endif /* _CREATE_ARRAY_ */
 
-
+#ifndef _STRDUP_
+#define _STRDUP_
+char *_strdup(char *str);
+#endif /* _STRDUP_ */
 
 #endif /* _MAIN_H_ */
