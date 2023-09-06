@@ -10,20 +10,22 @@
 char *_strdup(char *str)
 {
 	char *new_str;
-	unsigned int looper;
+	unsigned int looper, count;
 
+	for (count = 0; str[count] != '\0'; count++)
+		;
 
-	new_str = malloc(sizeof(str) + 1);
+	new_str = malloc(sizeof(str[0]) * count);
 	if (new_str == NULL || str == NULL)
 		return (NULL);
 
 	looper = 0;
-	while (str[looper] != '\0')
+	while (looper < count)
 	{
 		new_str[looper] = str[looper];
 		looper++;
 	}
-	new_str[looper] = '\0';
+	new_str[count] = '\0';
 
 	return (new_str);
 }
