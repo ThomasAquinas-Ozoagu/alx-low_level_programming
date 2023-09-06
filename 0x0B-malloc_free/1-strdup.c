@@ -1,9 +1,9 @@
 #include <stdlib.h>
 
 /**
- * strdup - a function that returns a pointer to a newly allocated space in
+ * _strdup - a function that returns a pointer to a newly allocated space in
  * memory, which contains a copy of the string given as a parameter.
- * @str: string to be duplicated 
+ * @str: string to be duplicated
  * Return: Null if nothing was created, else pointer to storage location
  */
 
@@ -13,7 +13,7 @@ char *_strdup(char *str)
 	unsigned int looper;
 
 
-	new_str = malloc(sizeof(str));
+	new_str = malloc(sizeof(str) + 1);
 	if (new_str == NULL || str == NULL)
 		return (NULL);
 
@@ -23,6 +23,7 @@ char *_strdup(char *str)
 		new_str[looper] = str[looper];
 		looper++;
 	}
+	new_str[looper] = '\0';
 
 	return (new_str);
 }
