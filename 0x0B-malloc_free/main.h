@@ -17,4 +17,9 @@ char *create_array(unsigned int size, char c);
 char *_strdup(char *str);
 #endif /* _STRDUP_ */
 
+#ifndef _STR_CONCAT_
+#define _STR_CONCAT_
+char *str_concat(char *s1, char *s2);
+#endif /* _STR_CONCAT_ */
+
 #endif /* _MAIN_H_ */
