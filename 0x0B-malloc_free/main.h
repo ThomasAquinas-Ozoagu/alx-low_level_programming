@@ -32,6 +32,9 @@ int **alloc_grid(int width, int height);
 void free_grid(int **grid, int height);
 #endif /* _FREE_GRID_ */
 
-
+#ifndef _ARGSTOSTR_
+#define _ARGSTOSTR_
+char *argstostr(int ac, char **av);
+#endif /* _ARGSTOSTR_ */
 
 #endif /* _MAIN_H_ */
