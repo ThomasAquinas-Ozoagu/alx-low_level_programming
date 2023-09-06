@@ -22,4 +22,16 @@ char *_strdup(char *str);
 char *str_concat(char *s1, char *s2);
 #endif /* _STR_CONCAT_ */
 
+#ifndef _ALLOC_GRID_
+#define _ALLOC_GRID_
+int **alloc_grid(int width, int height);
+#endif /* _ALLOC_GRID_ */
+
+#ifndef _FREE_GRID_
+#define _FREE_GRID_
+void free_grid(int **grid, int height);
+#endif /* _FREE_GRID_ */
+
+
+
 #endif /* _MAIN_H_ */

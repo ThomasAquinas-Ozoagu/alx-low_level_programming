@@ -1,29 +1,50 @@
 #include <stdlib.h>
 
 /**
- * create_array -  a function that creates an array of chars,
- * and initializes it with a specific char.
- * @size: dimension of array
- * @c: array name
- * Return: Null if nothing was created, else pointer to storage location
+ * str_concat - function that concatenates two strings.
+ *
+ * @s1: string 1
+ *
+ * @s2: string 2
+ *
+ * Return: pointer to the result
+ *
  */
 
-char *create_array(unsigned int size, char c)
+char *str_concat(char *s1, char *s2)
 {
-	char *new_array;
-	unsigned int looper;
-	char fill = c;
+	int i, j, k, l;
+	char *s3;
+	int m = 0;
 
-	new_array = malloc(sizeof(fill) * size);
-	if (new_array == NULL || size == 0)
+	if (s1 == NULL)
+		s1 = "";
+
+	if (s2 == NULL)
+		s2 = "";
+
+	for (i = 0; s1[i]; i++)
+		;
+	for (j = 0; s2[j]; j++)
+		;
+
+	s3 = malloc((i + j + 1) * sizeof(char));
+	if (!s3)
 		return (NULL);
+	for (k = 0; k < i; k++)
+		s3[k] = s1[k];
 
-	looper = 0;
-	while (looper < size)
+	for (l = 0; l < j; l++)
 	{
-		new_array[looper] = fill;
-		looper++;
+		s3[k + l] = s2[l];
+		if (s3[k + l] != s2[l])
+			m = 1;
 	}
 
-	return (new_array);
+	s3[i + j] = '\0';
+
+	if (m > 0)
+		return (NULL);
+
+	return (s3);
 }
