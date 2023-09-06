@@ -12,11 +12,11 @@ char *_strdup(char *str)
 	char *new_str;
 	unsigned int looper, count;
 
-	for (count = 0; str[count] != '\0'; count++)
-		;
-
 	if (str == NULL)
 		return (NULL);
+
+	for (count = 0; str[count] != '\0'; count++)
+		;
 
 	new_str = malloc(sizeof(str[0]) * count);
 	if (new_str == NULL)
