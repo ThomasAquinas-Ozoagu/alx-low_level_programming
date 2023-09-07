@@ -2,6 +2,31 @@
 #include <stdio.h>
 
 /**
+ * chk_size - counts a 2 dim array
+ * @avr: array to be counted
+ * Return: the size
+ */
+
+int chk_size(char **avr)
+{
+	int count, c_in, c_out;
+
+	c_in = 0;
+	c_out = 0;
+	count = 0;
+	while (avr[c_out])
+	{
+		while (avr[c_out][c_in] != '\0')
+		{
+			count++;
+			c_in++;
+		}
+		c_out++;
+	}
+	return (count);
+}
+
+/**
  * argstostr - concatenates all the arguments of your program
  *
  * @ac: number of strings
@@ -20,20 +45,7 @@ char *argstostr(int ac, char **av)
 	if (ac == 0 || av == NULL)
 		return (NULL);
 
-	c_in = 0;
-	c_out = 0;
-	count = 0;
-	while (av[c_out])
-	{
-		while (av[c_out][c_in] != '\0')
-		{
-			count++;
-			c_in++;
-		}
-		c_out++;
-	}
-
-
+	count = chk_size(av);
 	str = malloc(sizeof(char) * (count + ac + 1));
 	if (!str)
 		return (NULL);
@@ -52,9 +64,9 @@ char *argstostr(int ac, char **av)
 		}
 		c_out++;
 		str[conc] = '\n';
-		conc++; 
+		conc++;
 	}
-	str[count] = '\0';
+	str[conc] = '\0';
 
 	return (str);
 }
