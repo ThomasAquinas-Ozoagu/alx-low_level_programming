@@ -17,20 +17,18 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	va_list my_variables;
 	int count;
 
-	if (separator != NULL)
-	{
-		va_start(my_variables, n);
-		printf("%d", va_arg(my_variables, int));
+	va_start(my_variables, n);
+	printf("%d", va_arg(my_variables, int));
 
-		count = n - 1;
-		while (count > 0)
-		{
-		printf("%s", separator);
+	count = n - 1;
+	while (count > 0)
+	{
+		if (separator != NULL)
+			printf("%s", separator);
 		printf("%d", va_arg(my_variables, int));
 		count--;
-		}
-		va_end(my_variables);
 	}
+	va_end(my_variables);
 
 	printf("\n");
 
