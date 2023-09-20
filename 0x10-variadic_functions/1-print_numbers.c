@@ -25,7 +25,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		count = n - 1;
 		while (count > 0)
 		{
-		printf("%s ", separator);
+		printf("%s", separator);
 		printf("%d", va_arg(my_variables, int));
 		count--;
 		}
