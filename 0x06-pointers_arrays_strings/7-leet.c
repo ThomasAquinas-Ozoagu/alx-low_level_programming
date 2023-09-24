@@ -13,7 +13,7 @@ char *leet(char *s)
 {
 	int r;
 
-	for (r = 0; s[r]; r++)
+	for (r = 0; s[r] != '\0'; r++)
 	{
 		if (s[r] == 'a' || s[r] == 'A')
 			s[r] = 52;
