@@ -1,0 +1,1 @@
+In this directory, I did exercises that helped me understand arguments better.
