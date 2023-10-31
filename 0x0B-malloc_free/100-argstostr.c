@@ -9,7 +9,7 @@
 
 int chk_size(char **avr)
 {
-	int count, c_in, c_out;
+	unsigned int count, c_in, c_out;
 
 	c_in = 0;
 	c_out = 0;
@@ -38,7 +38,7 @@ int chk_size(char **avr)
 
 char *argstostr(int ac, char **av)
 {
-	int conc, count, c_in, c_out;
+	unsigned int conc, count, c_in, c_out;
 	char *str;
 
 
