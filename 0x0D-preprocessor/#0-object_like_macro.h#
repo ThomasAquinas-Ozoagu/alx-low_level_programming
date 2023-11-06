@@ -1,0 +1,7 @@
+
+
+#define SIZE 1024
+
+#endif /* ifndef _SIZE_ */
+
+#endif /* _0-OBJECT_LIKE_MACRO_ */
