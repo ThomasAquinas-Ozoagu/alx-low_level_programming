@@ -1,12 +1,20 @@
-#ifndef _dog_
-#define _dog_
+#ifndef _DOG_
+#define _DOG_
 
+/* struct dog - a living pet with physical attributes */
 
-struct dog /* dog - a living pet with physical attributes */
+struct dog
 {
 	char *name;
 	float age;
 	char *owner;
 
 }
-#endif /* define _dog_ */
+
+#ifndef _INIT_DOG_
+#define _INIT_DOG_
+	void init_dog(struct dog *d, char *name, float age, char *owner);
+
+#endif /* define _INIT_DOG_ */
+
+#endif /* define _DOG */
