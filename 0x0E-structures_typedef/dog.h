@@ -1,7 +1,15 @@
 #ifndef _DOG_
 #define _DOG_
 
-/* struct dog - a living pet with physical attributes */
+/**
+ * struct dog - a living pet with physical attributes
+ * @name: name of dog
+ * @age: age of dog
+ * @owner: owner of dog
+ *
+ * this struct will be use across multiple exercises
+ */
+
 
 struct dog
 {
