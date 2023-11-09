@@ -16,6 +16,10 @@ int sum_them_all(const unsigned int n, ...);
 void print_numbers(const char *separator, const unsigned int n, ...);
 #endif /* _PRINT_NUMBERS_ */
 
+#ifndef _PRINT_STRINGS_
+#define _PRINT_STRINGS_
+void print_strings(const char *separator, const unsigned int n, ...);
+#endif /* _PRINT_STRINGS_ */
 
 
 
