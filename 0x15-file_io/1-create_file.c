@@ -24,15 +24,18 @@ int create_file(const char *filename, char *text_content)
 	int nbyte = sizeof(text_content);
 
 /*	printf("File name is %s\n", filename); */
-	if (filename == NULL || text_content == NULL)
+	if (filename == NULL)
 		return (-1); /* Check if file with content was provided*/
 
 /*	printf("Before OPEN, fd = %d\n", fd); */
 	fd = open(filename, O_RDWR | O_CREAT | O_TRUNC, 0600); /*  Open file */
 /*	printf("After OPEN, fd = %d\n", fd); */
 
-	outcome = write(fd, text_content, nbyte);
-	if (outcome == -1)
-		return (-1);
+	if (text_content != NULL)
+	{
+		outcome = write(fd, text_content, nbyte);
+		if (outcome == -1)
+			return (-1);
+	}
 	return (1);
 }
