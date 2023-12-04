@@ -13,7 +13,7 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fd;
-	int qtyread, qtywrite;
+	int qtyread, qtywrite, closed;
 	char *buf;
 
 	if (filename == NULL) /*Confirm that a file with content was provided*/
@@ -36,10 +36,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	qtywrite = write(STDOUT_FILENO, buf, qtyread);
 	if (qtywrite !=  qtyread)
-	{
-		printf("\n******************\nWrite failed\n");
 		return (0);
-	}
 	free(buf); /* Deallocate the temp storage*/
+	closed = close(fd);
 	return (qtywrite); /* Return quantity read*/
 }
