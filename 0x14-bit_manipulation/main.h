@@ -16,6 +16,10 @@ unsigned int binary_to_uint(const char *b);
 void print_binary(unsigned long int n);
 #endif /* _PRINT_BINARY_ */
 
+#ifndef _GET_BIT_
+#define _GET_BIT_
+int get_bit(unsigned long int n, unsigned int index);
+#endif /* _GET_BIT_ */
 
 
 
