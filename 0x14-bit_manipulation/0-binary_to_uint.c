@@ -1,5 +1,4 @@
-#include <stdio.h>
-
+#include <stddef.h>
 /**
  * getlen - get string lenght
  * @str: the string
@@ -24,8 +23,9 @@ unsigned int getlen(const char *str)
  * Return: the result
  */
 
-unsigned int power(unsigned int base, unsigned int index)
-{
+
+ unsigned int power(unsigned int base, unsigned int index)
+ {
 	unsigned int nums, tot = 1;
 
 	if (index == 0)
