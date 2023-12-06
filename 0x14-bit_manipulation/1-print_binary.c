@@ -42,12 +42,9 @@ void print_binary(unsigned long int n)
 	checker = 1;
 	while (result > checker)
 	{
-			checker *= 2;
-			count++;
+		checker *= 2;
+		count++;
 	}
-
-
-
 	if (result < 2)
 		_putchar('0' + result);
 	else
@@ -57,7 +54,6 @@ void print_binary(unsigned long int n)
 		for (drw = count; drw >= 0; drw--)
 		{
 			temp = power(2, drw);
-
 			if (result >= temp)
 			{
 				_putchar('1');
@@ -65,17 +61,10 @@ void print_binary(unsigned long int n)
 			}
 			else
 				_putchar('0');
-/*
- *			printf("\nresult is %lu, temp is %lu, drw is %d\n",
- *result, temp, drw);
- */
+/* printf("\nresult is %lu, temp is %lu, drw is %d\n", result, temp, drw);*/
 		}
 	}
 /* print 1 to correspond to that */
 /* subtract checker from n and store the difference */
 /* check the next lower power of 2 recursively till 1. */
-
-
-
-
 }

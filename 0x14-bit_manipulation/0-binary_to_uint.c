@@ -24,8 +24,8 @@ unsigned int getlen(const char *str)
  */
 
 
- unsigned int power(unsigned int base, unsigned int index)
- {
+unsigned int power(unsigned int base, unsigned int index)
+{
 	unsigned int nums, tot = 1;
 
 	if (index == 0)
