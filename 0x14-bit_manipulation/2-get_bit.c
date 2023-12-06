@@ -48,7 +48,7 @@ int get_bit(unsigned long int n, unsigned int index)
 	}
 	if (result < 2)
 		return (1);
-	else
+	if (result > 1)
 	{
 		if (power(2, count) > result)
 			count--;
