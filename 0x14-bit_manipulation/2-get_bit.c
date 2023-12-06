@@ -46,7 +46,9 @@ int get_bit(unsigned long int n, unsigned int index)
 		checker *= 2;
 		count++;
 	}
-	if (result < 2)
+	if (result == 0)
+		return (0);
+	if (result == 1)
 		return (1);
 	if (result > 1)
 	{
