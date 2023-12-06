@@ -21,6 +21,10 @@ void print_binary(unsigned long int n);
 int get_bit(unsigned long int n, unsigned int index);
 #endif /* _GET_BIT_ */
 
+#ifndef _SET_BIT_
+#define _SET_BIT_
+int set_bit(unsigned long int *n, unsigned int index);
+#endif /* _SET_BIT_ */
 
 
 
