@@ -36,11 +36,9 @@ unsigned long int power(int base, int index)
 
 int get_bit(unsigned long int n, unsigned int index)
 {
-	unsigned long int result = n, checker, count, temp, drw = 0;
+	unsigned long int result = n, checker = 0, count = 0, temp, drw = 0;
 
 /* find the highest power of 2 (checker) that is a factor of n */
-	count = 0;
-	checker = 1;
 	while (result > checker)
 	{
 		checker *= 2;
@@ -61,12 +59,12 @@ int get_bit(unsigned long int n, unsigned int index)
 			{
 				/*	_putchar('1'); */
 				result -= temp;
-				if (drw - 1 == index)
+				if ((drw - 1) == index)
 					return (1);
 			}
 			else
 			{
-				if (drw - 1 == index)
+				if ((drw - 1) == index)
 					return (0);
 				/*	_putchar('0'); */
 			}
