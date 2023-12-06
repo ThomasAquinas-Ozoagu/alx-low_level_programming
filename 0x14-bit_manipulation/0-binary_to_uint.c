@@ -64,7 +64,8 @@ unsigned int binary_to_uint(const char *b)
 	{
 		if (b[ndex - 1] == '0')
 		{
-/**			printf("The bit is 0, index is %d\n", ndex - 1);
+/*
+ *			printf("The bit is 0, index is %d\n", ndex - 1);
  *			printf("suma is now %d\n", suma);
  *			printf("The character is %d\n", b[ndex - 1]);
  */
@@ -78,18 +79,13 @@ unsigned int binary_to_uint(const char *b)
 /*			printf("suma is now %d\n", suma); */
 /*			printf("The character is %c\n", b[ndex - 1]); */
 		}
-		if ((b[ndex - 1] < 48 || b[ndex -1] > 49) && b[ndex - 1] != 0)
+		if ((b[ndex - 1] < 48 || b[ndex - 1] > 49) && b[ndex - 1] != 0)
 		{
-
-/*			printf("Would've Terminated prematurely "); */
-/*			printf("at %d\n\n", b[ndex - 1]); */
 			return (0);
 		}
 
 		bit++;
 	}
 
-/* Return the result */
-/*	printf("---------------------------------Result is "); */
 	return (suma);
 }
