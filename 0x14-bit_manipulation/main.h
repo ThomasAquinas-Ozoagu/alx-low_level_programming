@@ -26,6 +26,10 @@ int get_bit(unsigned long int n, unsigned int index);
 int set_bit(unsigned long int *n, unsigned int index);
 #endif /* _SET_BIT_ */
 
+#ifndef _CLEAR_BIT_
+#define _CLEAR_BIT_
+int clear_bit(unsigned long int *n, unsigned int index);
+#endif /* _CLEAR_BIT_ */
 
 
 
