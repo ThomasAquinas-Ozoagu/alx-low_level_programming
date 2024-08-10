@@ -31,7 +31,10 @@ int set_bit(unsigned long int *n, unsigned int index);
 int clear_bit(unsigned long int *n, unsigned int index);
 #endif /* _CLEAR_BIT_ */
 
-
+#ifndef _FLIP_BITS_
+#define _FLIP_BITS_
+unsigned int flip_bits(unsigned long int n, unsigned long int m);
+#endif /* _FLIP_BITS_ */
 
 
 #endif /* _MAIN_H_ */

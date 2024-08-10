@@ -2,21 +2,18 @@
 #include "main.h"
 
 /**
- * power - find the x raised to the power y
- * @base: the main number
- * @index: the number of times to raise it
- * Return: the result
+ * base2 - convert integer to base 2
+ * @num: The integer to be converter
+ * Return: number of 1s
  */
 
 
-unsigned long int power(unsigned long int base, unsigned int index)
+unsigned int power(unsigned long int num)
 {
 	unsigned long int tot = 1;
-	unsigned int nums;
+	int nums;
 
-	if (base == 0)
-		return (0);
-	if (index == 0)
+	if (index == 0 || base == 0)
 		return (1);
 	for (nums = 1; nums <= index; nums++)
 	{
