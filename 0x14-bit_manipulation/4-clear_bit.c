@@ -40,11 +40,10 @@ int clear_bit(unsigned long int *n, unsigned int index)
 
 	temp = *n;
 	addn = power(2, index);
-/*	printf("The number is %lu\nwhile Index is %d\n\n", temp, index); */
-	if (*n < addn)
-		return (-1);
-	*n -= addn;
-	if (*n == temp)
-		return (-1);
+	/*      printf("The number is %lu\nwhile Index is %d\n addn is %lu\n */
+	/* and junior is %lu\n\n", temp, index, addn, junior); */
+	if ((temp | addn) == *n)
+		*n -= addn;
+
 	return (1);
 }
