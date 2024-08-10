@@ -8,41 +8,33 @@
  */
 
 
-unsigned int power(unsigned long int num)
+unsigned int base2(unsigned long int num)
 {
-	unsigned long int tot = 1;
-	int nums;
+	unsigned int count = 0;
 
-	if (index == 0 || base == 0)
-		return (1);
-	for (nums = 1; nums <= index; nums++)
+	while (num > 0)
 	{
-		tot *= base;
-		/*              printf("tot = %d", tot); */
+		count += (num % 2);
+		num /= 2;
 	}
-	return (tot);
+	return (count);
 }
 
-
 /**
- * clear_bit - sets the value of a bit to 0 at a given index
+ * flip_bits - calculates of bits you would need to flip to get
+ * from one number to another.
  *
- * @n: the integer to be converted
+ * @n: the starting point
  *
- * @index: The position of the bit
- * Return:  the value of the bit at index index or -1 if an error occured
+ * @m: the end point
+ *
+ * Return:  returns the number
  */
 
-int clear_bit(unsigned long int *n, unsigned int index)
+unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	unsigned long int temp, addn;
+	unsigned long int xor;
 
-	temp = *n;
-	addn = power(2, index);
-	/*      printf("The number is %lu\nwhile Index is %d\n addn is %lu\n */
-	/* and junior is %lu\n\n", temp, index, addn, junior); */
-	if ((temp | addn) == *n)
-		*n -= addn;
-
-	return (1);
+	xor = n ^ m;
+	return (base2(xor));
 }
