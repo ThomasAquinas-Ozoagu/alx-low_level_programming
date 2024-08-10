@@ -10,12 +10,16 @@
 
 unsigned int base2(unsigned long int num)
 {
+	unsigned long int inc = 1, comp = num;
 	unsigned int count = 0;
 
-	while (num > 0)
+	if (num == 1)
+		return (1);
+	while (num > inc)
 	{
-		count += (num % 2);
-		num /= 2;
+		if ((comp | inc) == num)
+			count++;
+		inc *= 2;
 	}
 	return (count);
 }
