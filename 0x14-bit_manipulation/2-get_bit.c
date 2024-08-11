@@ -9,12 +9,14 @@
  */
 
 
-unsigned long int power(int base, int index)
+unsigned long int power(unsigned long int base, unsigned int index)
 {
 	unsigned long int tot = 1;
-	int nums;
+	unsigned int nums;
 
-	if (index == 0 || base == 0)
+	if (base == 0)
+		return (0);
+	if (index == 0)
 		return (1);
 	for (nums = 1; nums <= index; nums++)
 	{
@@ -26,7 +28,7 @@ unsigned long int power(int base, int index)
 
 
 /**
- * get_bit - converts integer to binary
+ * get_bit - sets the value of a bit to 0 at a given index
  *
  * @n: the integer to be converted
  *
@@ -36,43 +38,14 @@ unsigned long int power(int base, int index)
 
 int get_bit(unsigned long int n, unsigned int index)
 {
-	unsigned long int result = n, checker = 0, count = 0, temp, drw = 0;
+	unsigned long int temp, addn;
 
-/* find the highest power of 2 (checker) that is a factor of n */
-	while (result > checker)
-	{
-		checker *= 2;
-		count++;
-	}
-	if (result == 0)
-		return (0);
-	if (result == 1)
+	temp = n;
+	addn = power(2, index);
+	/* printf("The number is %lu\nwhile Index is %d\n */
+	/*addn is %lu\n\n\n", temp, index, addn); */
+	if ((temp | addn) == n)
 		return (1);
-	if (result > 1)
-	{
-		if (power(2, count) > result)
-			count--;
-		for (drw = count + 1; drw > 0; drw--)
-		{
-			temp = power(2, drw - 1);
-			if (result >= temp)
-			{
-				/*	_putchar('1'); */
-				result -= temp;
-				if ((drw - 1) == index)
-					return (1);
-			}
-			else
-			{
-				if ((drw - 1) == index)
-					return (0);
-				/*	_putchar('0'); */
-			}
-/* printf("\nresult is %lu, temp is %lu, drw is %d\n", result, temp, drw);*/
-		}
-	}
-/* print 1 to correspond to that */
-/* subtract checker from n and store the difference */
-/* check the next lower power of 2 recursively till 1. */
-	return (-1);
+
+	return (0);
 }
