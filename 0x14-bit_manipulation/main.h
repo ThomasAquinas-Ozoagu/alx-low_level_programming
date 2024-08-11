@@ -36,5 +36,10 @@ int clear_bit(unsigned long int *n, unsigned int index);
 unsigned int flip_bits(unsigned long int n, unsigned long int m);
 #endif /* _FLIP_BITS_ */
 
+#ifndef _GET_ENDIANNESS_
+#define _GET_ENDIANNESS_
+int get_endianness(void);
+#endif /* _GET_ENDIANNESS_ */
+
 
 #endif /* _MAIN_H_ */
