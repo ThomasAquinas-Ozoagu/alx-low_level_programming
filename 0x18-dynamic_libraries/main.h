@@ -1,6 +1,30 @@
 #ifndef _MAIN_H_
 #define _MAIN_H_
 
+#ifndef _MOD_
+#define _MOD_
+int mod(int a, int b);
+#endif /* _MOD_ */
+
+#ifndef _DIV_
+#define _DIV_
+int div(int a, int b);
+#endif /* _DIV_ */
+
+#ifndef _MUL_
+#define _MUL_
+int mul(int a, int b);
+#endif /* _MUL_ */
+
+#ifndef _SUB_
+#define _SUB_
+int sub(int a, int b);
+#endif /* _SUB_ */
+
+#ifndef _ADD_
+#define _ADD_
+int add(int a, int b);
+#endif /* _ADD_ */
 
 
 #ifndef _PUTCHAR_
