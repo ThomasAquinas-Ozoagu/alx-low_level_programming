@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 /**
  * add - sums two integers
  * @a: The first integer
@@ -63,5 +65,5 @@ int div(int a, int b)
  */
 int mod(int a, int b)
 {
-	return (a / b);
+	return (a % b);
 }
