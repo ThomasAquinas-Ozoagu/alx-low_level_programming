@@ -2,11 +2,12 @@
 # make		# compile all binary
 # make clean	# remove ALL binaries and objects
 
-# .DEFAULT_GOAL = all
+.PHONY = all
 
+all: school
 CC = gcc
 SRC = $(wildcard *.c)
 
 
-all: ${SRC}
+school: ${SRC}
 	${CC} ${SRC} -o school
