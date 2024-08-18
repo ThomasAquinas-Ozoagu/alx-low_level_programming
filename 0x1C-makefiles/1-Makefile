@@ -1,0 +1,13 @@
+# Usage:
+# make		# compile all binary
+# make clean	# remove ALL binaries and objects
+
+.PHONY = all
+
+CC = gcc
+SRC := $(wildcard *.c)
+
+all: school
+
+school: ${SRC}
+	${CC} ${SRC} -o shcool
