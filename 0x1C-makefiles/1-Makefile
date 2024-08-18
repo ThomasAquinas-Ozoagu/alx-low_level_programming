@@ -2,11 +2,11 @@
 # make		# compile all binary
 # make clean	# remove ALL binaries and objects
 
-.DEFAULT_GOAL = all
+# .DEFAULT_GOAL = all
 
-CC = gcc
+CC := gcc
 SRC := $(wildcard *.c)
 
 
-all: ${SRC}
+all:
 	${CC} ${SRC} -o school
