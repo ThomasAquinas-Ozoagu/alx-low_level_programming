@@ -5,7 +5,7 @@
 # .DEFAULT_GOAL = all
 
 CC = gcc
-SRC := $(wildcard *.c)
+SRC = $(wildcard *.c)
 
 
 all: ${SRC}
