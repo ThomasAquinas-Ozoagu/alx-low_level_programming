@@ -6,7 +6,7 @@ of the island described in grid
 
 
 def island_perimeter(grid):
-
+    """ Grid is completely surrounded by water, and there is one island"""
     perimeter = 0
 
     for i in range(len(grid)):
