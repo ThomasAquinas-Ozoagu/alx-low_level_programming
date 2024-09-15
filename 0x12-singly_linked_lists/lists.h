@@ -30,6 +30,12 @@ size_t print_list(const list_t *h);
 #endif /* _PRINT_LIST_ */
 
 
+#ifndef _LIST_LEN_
+#define _LIST_LEN_
+size_t list_len(const list_t *h);
+#endif /* _LIST_LEN_ */
+
+
 
 
 
