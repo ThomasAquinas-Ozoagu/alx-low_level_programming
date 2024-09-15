@@ -50,4 +50,5 @@ void free_dog(dog_t *d);
 
 
 
-#endif /* define _DOG */
+
+#endif /* define _DOG_ */
