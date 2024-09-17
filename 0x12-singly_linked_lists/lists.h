@@ -41,6 +41,11 @@ list_t *add_node(list_t **head, const char *str);
 #endif /* _ADD_NODE_ */
 
 
+#ifndef _ADD_NODE_END_
+#define _ADD_NODE_END_
+list_t *add_node_end(list_t **head, const char *str);
+#endif /* _ADD_NODE_END_ */
+
 
 
 
