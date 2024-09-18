@@ -5,6 +5,8 @@
 
 /**
  * free_list -  frees a list_t list.
+ *
+ * @head: the list
  */
 
 void free_list(list_t *head)
@@ -19,4 +21,5 @@ void free_list(list_t *head)
 		free(scan);
 	}
 	free(head);
+	free(scan);
 }
