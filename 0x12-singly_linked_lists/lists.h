@@ -47,6 +47,11 @@ list_t *add_node_end(list_t **head, const char *str);
 #endif /* _ADD_NODE_END_ */
 
 
+#ifndef _FREE_LIST_
+#define _FREE_LIST_
+void free_list(list_t *head);
+#endif /* _FREE_LIST_ */
+
 
 
 
