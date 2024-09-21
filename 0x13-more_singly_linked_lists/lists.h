@@ -33,6 +33,10 @@ size_t print_listint(const listint_t *h);
 size_t listint_len(const listint_t *h);
 #endif /* _LISTINT_LEN_ */
 
+#ifndef _ADD_NODEINT_
+#define _ADD_NODEINT_
+listint_t *add_nodeint(listint_t **head, const int n);
+#endif /* _ADD_NODEINT_ */
 
 
 
