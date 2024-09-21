@@ -16,8 +16,8 @@
 size_t print_listint(const listint_t *h)
 {
 	size_t count = 0;
-	int val = 5;
-	int lim = 10;
+	long int val = 5;
+	long int lim = 10;
 	const listint_t *trav = h;
 
 	if (h == NULL)
