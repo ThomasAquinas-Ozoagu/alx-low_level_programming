@@ -26,7 +26,7 @@ size_t print_listint(const listint_t *h)
 	while (trav != NULL)
 	{
 		val = trav->n;
-		_putchar('0'+val);
+		_putchar('0' + val);
 		_putchar('\n');
 		count += 1;
 		trav = trav->next;
@@ -43,5 +43,5 @@ size_t print_listint(const listint_t *h)
  */
 int _putchar(char c)
 {
-        return (write(1, &c, 1));
+	return (write(1, &c, 1));
 }
