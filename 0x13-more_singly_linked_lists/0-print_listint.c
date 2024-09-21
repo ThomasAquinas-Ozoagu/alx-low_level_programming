@@ -17,6 +17,7 @@ size_t print_listint(const listint_t *h)
 {
 	size_t count = 0;
 	int val = 5;
+	int lim = 10;
 	const listint_t *trav = h;
 
 	if (h == NULL)
@@ -25,22 +26,14 @@ size_t print_listint(const listint_t *h)
 	while (trav != NULL)
 	{
 		val = trav->n;
-		if (val > 999)
-		{
-			_putchar('0' + (val / 1000));
-			val = val % 1000;
-		}
 
-		if (val > 99)
+		while (val > (lim * 10))
+			lim *= 10;
+		while (val > 9)
 		{
-			_putchar('0' + (val / 100));
-			val = val % 100;
-		}
-
-		if (val > 9)
-		{
-			_putchar('0' + (val / 10));
-			val = val % 10;
+			_putchar('0' + (val / lim));
+			val = val % lim;
+			lim /= 10;
 		}
 
 		if (val < 10)
