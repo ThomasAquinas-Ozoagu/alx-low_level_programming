@@ -28,6 +28,10 @@ int _putchar(char c);
 size_t print_listint(const listint_t *h);
 #endif /* _PRINT_LISTINT_ */
 
+#ifndef _LISTINT_LEN_
+#define _LISTINT_LEN__
+size_t listint_len(const listint_t *h);
+#endif /* _LISTINT_LEN_ */
 
 
 
