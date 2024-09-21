@@ -26,7 +26,26 @@ size_t print_listint(const listint_t *h)
 	while (trav != NULL)
 	{
 		val = trav->n;
-		_putchar('0' + val);
+		if (val > 999)
+		{
+			_putchar('0' + (val / 1000));
+			val = val % 1000;
+		}
+
+		if (val > 99)
+		{
+			_putchar('0' + (val / 100));
+			val = val % 100;
+		}
+
+		if (val > 9)
+		{
+			_putchar('0' + (val / 10));
+			val = val % 10;
+		}
+
+		if (val < 10)
+			_putchar('0' + val);
 		_putchar('\n');
 		count += 1;
 		trav = trav->next;
