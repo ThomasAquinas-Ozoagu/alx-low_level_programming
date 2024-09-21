@@ -5,6 +5,18 @@
 #include "lists.h"
 
 /**
+ * _putchar - writes the character c to stdout
+ * @c: The character to print
+ *
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
+ */
+int _putchar(char c)
+{
+	return (write(1, &c, 1));
+}
+
+/**
  * print_listint - prints all the elements of a listint_t list.
  *
  * @h: the head of the list
