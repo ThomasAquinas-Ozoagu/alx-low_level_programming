@@ -25,6 +25,11 @@ size_t print_listint(const listint_t *h)
 	{
 		val = trav->n;
 
+		if (val < 0)
+		{
+			_putchar('-');
+			val *= -1;
+		}
 		while (val > (lim * 10))
 			lim *= 10;
 		while (val > 9)
