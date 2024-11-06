@@ -37,6 +37,11 @@ size_t print_listint(const listint_t *h)
 			_putchar('0' + (val / lim));
 			val = val % lim;
 			lim /= 10;
+			if ((lim > val) & (lim > 9))
+			{
+				_putchar('0');
+				lim /= 10;
+			}
 		}
 
 		if (val < 10)

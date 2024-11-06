@@ -50,7 +50,20 @@ listint_t *add_nodeint_end(listint_t **head, const int n);
 void free_listint(listint_t *head);
 #endif /* _FREE_LISTINT_ */
 
+#ifndef _FREE_LISTINT2_
+#define _FREE_LISTINT2_
+void free_listint2(listint_t **head);
+#endif /* _FREE_LISTINT2_ */
 
+#ifndef _POP_LISTINT_
+#define _POP_LISTINT_
+int pop_listint(listint_t **head);
+#endif /* _POP_LISTINT_ */
+
+#ifndef _GET_NODEINT_AT_INDEX_
+#define _GET_NODEINT_AT_INDEX_
+listint_t *get_nodeint_at_index(listint_t *head, unsigned int index);
+#endif /* _GET_NODEINT_AT_INDEX_ */
 
 
 
