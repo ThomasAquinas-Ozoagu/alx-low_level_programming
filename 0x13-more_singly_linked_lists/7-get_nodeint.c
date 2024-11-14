@@ -14,20 +14,29 @@
 
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
+
+	unsigned int m = 0;
         listint_t *trav;
-        int m = 0;
+	listint_t *temp = head;
 
-        if(*head == NULL)
-                return (m);
 
-        m = (*head)->n;
+/*	printf("one"); */
+        if(temp == NULL)
+                return (NULL);
 
-        trav = (*head)->next;
-        free(*head);
-        *head = trav;
+/*	printf("two"); */
 
-        trav = NULL;
-        free(trav);
-
-        return (m);
+	if (index == 0)
+		return (temp);
+	while (m < index)
+	{
+		trav = temp->next;
+		temp = trav;
+	 	if (temp == NULL)
+			return (NULL);
+	 	m += 1;
+	}
+/*	printf("three"); */
+/*	free(trav); */
+        return (temp);
 }
