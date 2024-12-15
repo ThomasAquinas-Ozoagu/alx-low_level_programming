@@ -5,29 +5,29 @@
 
 /**
  * main - check the code
- * 
+ *
  * Return: Always 0.
  */
 int main(void)
 {
-    listint_t *head;
-    listint_t *new;
-    listint_t hello = {-5648634, NULL};
-    size_t n;
+	listint_t *head;
+	listint_t *new;
+	listint_t hello = {-5648634, NULL};
+	size_t n;
 
-    head = &hello;
-    new = malloc(sizeof(listint_t));
-    if (new == NULL)
-    {
-        printf("Error\n");
-        return (1);
-    }
-    new->n = 9349759;
-    new->next = head;
-    head = new;
+	head = &hello;
+	new = malloc(sizeof(listint_t));
+	if (new == NULL)
+	{
+		printf("Error\n");
+		return (1);
+	}
+	new->n = 9349759;
+	new->next = head;
+	head = new;
 
-    n = print_listint(head);
-    printf("-> %lu elements\n", n);
-    free(new);
-    return (0);
+	n = print_listint(head);
+	printf("-> %lu elements\n", n);
+	free(new);
+	return (0);
 }

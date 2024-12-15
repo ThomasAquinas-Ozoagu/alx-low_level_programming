@@ -76,4 +76,10 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n);
 #endif /* _INSERT_NODEINT_AT_INDEX_ */
 
 
+#ifndef _DELETE_NODEINT_AT_INDEX_
+#define _DELETE_NODEINT_AT_INDEX_
+int delete_nodeint_at_index(listint_t **head, unsigned int index);
+#endif /* _DELETE_NODEINT_AT_INDEX_ */
+
+
 #endif /* _LISTS_H_ */

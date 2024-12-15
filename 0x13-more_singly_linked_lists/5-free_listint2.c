@@ -4,7 +4,7 @@
 #include "lists.h"
 
 /**
- * free_listint - a function that adds a new node
+ * free_listint2 - a function that adds a new node
  *
  * @head: the head of the list
  *
